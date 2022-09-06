@@ -1,0 +1,160 @@
+main {
+  width: 100%;
+  height: calc(100vh - 122px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+section {
+  padding: 50px 40px;
+}
+h2 {
+  text-align: center;
+}
+article {
+  display: grid;
+  gap: 2px;
+  margin-top: 25px;
+}
+
+/* ------------ Palette grid ------------ */
+div.palettes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 68px;
+  border: 1px solid var(--color-grey-light);
+}
+input[type="color"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+input[type="color"]::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: var(--color-grey-light);
+  top: 0;
+  right: 0;
+}
+input[type="color"]:last-child::after {
+  content: inherit;
+}
+input[type="color"]::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: var(--color-main-jade);
+  mix-blend-mode: hard-light;
+  opacity: 0;
+  transition: var(--transition-main);
+}
+input[type="color"]:hover::before {
+  opacity: 0.2;
+}
+
+/* ------------ Font Selector ------------ */
+.fontSelector {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.fontsPicker {
+  width: 100%;
+  height: 70px;
+  background-color: transparent;
+  border: 1px solid #dddddd;
+  padding: 0 30px;
+  font-size: 21pt;
+  cursor: pointer;
+  text-align: left;
+}
+.fontsPicker.Active::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  background: transparent;
+  top: 0;
+  cursor: default;
+  z-index: 1;
+}
+.fontsPicker::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 8px 0 8px;
+  border-color: #000000 transparent transparent transparent;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  z-index: -1;
+  transform: translateY(-50%);
+}
+.List {
+  width: calc(100% - 2px);
+  height: 200px;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  right: 0;
+  display: none;
+  bottom: -1px;
+  z-index: 2;
+  transform: translateY(100%);
+  -webkit-box-shadow: 5px 5px 20px 0px rgb(0 0 0 / 4%);
+  box-shadow: 5px 5px 20px 0px rgb(0 0 0 / 4%);
+}
+.List.Upward {
+  bottom: 0;
+  transform: inherit;
+}
+.fontsPicker.Active ~ .List {
+  display: block;
+}
+img {
+  width: 361px;
+  height: auto;
+  display: block;
+}
+.Btns {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.Btns button {
+  display: block;
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-bottom: 1px solid #dddddd;
+  background-color: transparent;
+  opacity: 0.5;
+  text-align: left;
+  padding-left: 15px;
+  cursor: pointer;
+}
+.Btns button:last-child {
+  border-bottom: 0;
+}
+.Btns button:hover {
+  background: #d0fcf8;
+  mix-blend-mode: multiply;
+}

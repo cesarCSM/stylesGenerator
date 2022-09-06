@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme styler</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/pageTheme.css" />
+
+    <!-- Components -->
+    <script type="text/javascript" src="../components/header.js"></script>
+    <script
+      type="text/javascript"
+      src="../components/themePage/fontPicker.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../components/themePage/palettePicker.js"
+    ></script>
+
+    <!-- Global variables -->
+    <script src="../globalVars/fontsAPI.js"></script>
+    <script src="../globalVars/fontPickerList.js"></script>
+    <script src="../globalVars/fontVars.js"></script>
+    <script src="../globalVars/paletteVars.js"></script>
+
+    <!-- Script -->
+    <script type="text/javascript" src="../js/pageTheme.js"></script>
+    <script type="text/javascript" src="../js/globalFunc.js"></script>
+  </head>
+  <body>
+    <header-comp></header-comp>
+    <div id="importStyles"></div>
+
+    <main>
+      <section id="themeColor">
+        <h2>Teme color</h2>
+        <palette-picker value="pal1"></palette-picker>
+        <palette-picker value="pal2"></palette-picker>
+        <palette-picker value="pal3"></palette-picker>
+        <palette-picker value="pal4"></palette-picker>
+      </section>
+
+      <section id="themeFont">
+        <h2>Theme font</h2>
+        <font-picker value="h1"></font-picker>
+        <font-picker value="h2"></font-picker>
+        <font-picker value="p1"></font-picker>
+        <font-picker value="p2"></font-picker>
+      </section>
+    </main>
+    <button onclick="here()">Click</button>
+  </body>
+</html>
+<script>
+  function here() {
+    //localStorage.removeItem("themeGen");
+    console.log(
+      JSON.parse(JSON.parse(JSON.stringify(window.localStorage.themeGen)))
+    );
+  }
+</script>

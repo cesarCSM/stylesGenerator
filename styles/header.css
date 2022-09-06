@@ -1,0 +1,30 @@
+header {
+  background-color: var(--color-main-dark-sapphire);
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  padding: 60px 40px 20px;
+  max-height: 122px;
+}
+header > a {
+  text-decoration: none;
+}
+nav {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 20px;
+  align-items: center;
+  justify-content: right;
+}
+nav a {
+  text-decoration: none;
+  color: var(--color-white);
+  transition: var(--transition-main);
+  text-transform: capitalize;
+}
+nav a:hover {
+  color: var(--color-main-jade);
+}
+nav a.active {
+  text-decoration: underline;
+  color: var(--color-main-jade);
+}

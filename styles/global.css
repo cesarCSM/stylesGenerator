@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter&family=Work+Sans:wght@300;400;700&display=swap");
+:root {
+  --color-main-dark-sapphire: #01153a;
+  --color-main-jade: #04a777;
+  --color-main-jasper: #7a73ff;
+  --color-white: #ffffff;
+  --color-fire: #fb3640;
+  --color-zircon: #2a73e8;
+  --color-gold: #ffc857;
+  --color-onyx: #161925;
+  --color-grey-dark: #999999;
+  --color-grey-light: #dddddd;
+
+  --font-titles: normal normal normal 26pt "Bitter", sans-serif;
+  --font-subtitles: normal normal normal 16pt "Bitter", sans-serif;
+  --font-subtitles-secondary: normal normal bolder 14pt "Work Sans", sans-serif;
+  --font-content: normal normal 400 12pt "Work Sans", sans-serif;
+  --font-legal: normal normal 400 8pt "Work Sans", sans-serif;
+
+  --transition-main: all 0.25s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: var(--font-content);
+}
+
+h1 {
+  font: var(--font-titles);
+  color: var(--color-main-jade);
+}
+h2 {
+  font: var(--font-subtitles);
+  color: var(--color-main-dark-sapphire);
+}
+h3 {
+  font: var(--font-subtitles-secondary);
+  color: var(--color-main-dark-sapphire);
+}
+h4,
+p {
+  font: var(--font-content);
+}
+h4 {
+  text-transform: uppercase;
+  color: var(--color-grey-dark);
+}
+p {
+  color: var(--color-main-dark-sapphire);
+}
+p.legal {
+  font: var(--font-legal);
+  color: var(--color-main-dark-sapphire);
+}
+a {
+  color: var(--color-zircon);
+  color: var(--color-main-dark-sapphire);
+}
+.fullWidthBtn {
+  width: 100%;
+  height: 32px;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: none;
+  background-color: var(--color-white);
+  box-shadow: 1px 0 5px 0 rgb(0 0 0 / 15%);
+}
+.fullWidthBtn::after {
+  content: "›";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  color: var(--color-white);
+  font-size: 20pt;
+  font-family: arial;
+  font-weight: 100;
+  transform: translateY(calc(-50% - 2px));
+  mix-blend-mode: difference;
+}
