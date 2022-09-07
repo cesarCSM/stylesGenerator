@@ -34,47 +34,7 @@
   </head>
   <body>
     <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyCPZbd0FLjRUXNmDs8W2lSIFUkK54X007w",
-        authDomain: "stylesgenerator.firebaseapp.com",
-        projectId: "stylesgenerator",
-        storageBucket: "stylesgenerator.appspot.com",
-        messagingSenderId: "595368460469",
-        appId: "1:595368460469:web:f9ab31046453bc787cbefc",
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-
-      import {
-        getDatabase,
-        set,
-        get,
-        update,
-        remove,
-        ref,
-        child,
-      } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-database.js";
-
-      const db = getDatabase();
-
-      document.querySelector("#Submit").addEventListener("click", () => {
-        set(ref(db, "SG/button"), {
-          html: codeFinal,
-        })
-          .then(() => {
-            console.log("Worked!");
-          })
-          .catch((error) => {
-            console.log("Error - " + error);
-          });
-      });
+      import{initializeApp}from"https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";const firebaseConfig={apiKey:"AIzaSyCPZbd0FLjRUXNmDs8W2lSIFUkK54X007w",authDomain:"stylesgenerator.firebaseapp.com",projectId:"stylesgenerator",storageBucket:"stylesgenerator.appspot.com",messagingSenderId:"595368460469",appId:"1:595368460469:web:f9ab31046453bc787cbefc"},app=initializeApp(firebaseConfig);import{getDatabase,set,get,update,remove,ref,child}from"https://www.gstatic.com/firebasejs/9.9.4/firebase-database.js";const db=getDatabase();document.querySelector("#Submit").addEventListener("click",(()=>{set(ref(db,"SG/button"),{html:codeFinal}).then((()=>{console.log("Worked!")})).catch((e=>{console.log("Error - "+e)}))}));
     </script>
     <header-comp></header-comp>
     <div id="importStyles"></div>
@@ -112,6 +72,5 @@
         </button>
       </section>
     </main>
-    <button id="GetData">Get data</button>
   </body>
 </html>

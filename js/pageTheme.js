@@ -1,14 +1,1 @@
-window.addEventListener("load", () => {
-  importFonts();
-});
-
-function importFonts() {
-  const divStyles = document.querySelector("#importStyles");
-  divStyles.innerHTML = "";
-  Object.values(localTheme.fonts).forEach((val) => {
-    if (typeof val.family !== "number") return;
-    divStyles.innerHTML += `<style>@import url("https://fonts.googleapis.com/css?family=${FONTS[
-      val.family
-    ].family.replace(" ", "+")}");</style>`;
-  });
-}
+function importFonts(){const e=document.querySelector("#importStyles");e.innerHTML="",Object.values(localTheme.fonts).forEach((t=>{"number"==typeof t.family&&(e.innerHTML+=`<style>@import url("https://fonts.googleapis.com/css?family=${FONTS[t.family].family.replace(" ","+")}");</style>`)}))}window.addEventListener("load",(()=>{importFonts()}));
