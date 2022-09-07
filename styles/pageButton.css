@@ -79,7 +79,7 @@ form > div > label {
   margin-bottom: 10px;
 }
 button.Submit.Clicked::after {
-  content: "Code copied!";
+  content: "Button updated!";
   position: absolute;
   width: 100%;
   height: 100%;
