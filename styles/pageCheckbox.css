@@ -21,6 +21,7 @@ main {
   display: grid;
   gap: 10px;
   position: relative;
+  align-items: center;
   grid-template-columns: max-content max-content;
 }
 #chContainer input {
