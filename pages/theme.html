@@ -52,5 +52,14 @@
         <font-picker value="p2"></font-picker>
       </section>
     </main>
+    <button onclick="here()">Click</button>
   </body>
 </html>
+<script>
+  function here() {
+    //localStorage.removeItem("themeGen");
+    console.log(
+      JSON.parse(JSON.parse(JSON.stringify(window.localStorage.themeGen)))
+    );
+  }
+</script>

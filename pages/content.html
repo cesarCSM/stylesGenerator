@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button styler</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/pageContent.css" />
+
+    <!-- Components -->
+    <script type="text/javascript" src="../components/header.js"></script>
+    <script
+      type="text/javascript"
+      src="../components/contentPage/fontStyles.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../components/contentPage/colorPicker.js"
+    ></script>
+
+    <!-- Global variables -->
+    <script src="../globalVars/fontsAPI.js"></script>
+    <script src="../globalVars/fontVars.js"></script>
+    <script src="../globalVars/colorVars.js"></script>
+    <script src="../globalVars/paletteVars.js"></script>
+
+    <!-- Script -->
+    <script type="text/javascript" src="../js/globalFunc.js"></script>
+    <script type="text/javascript" src="../js/pageTheme.js"></script>
+    <script type="text/javascript" src="../js/pageContent.js"></script>
+  </head>
+  <body>
+    <script type="module">
+      import{initializeApp}from"https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";const firebaseConfig={apiKey:"AIzaSyCPZbd0FLjRUXNmDs8W2lSIFUkK54X007w",authDomain:"stylesgenerator.firebaseapp.com",projectId:"stylesgenerator",storageBucket:"stylesgenerator.appspot.com",messagingSenderId:"595368460469",appId:"1:595368460469:web:f9ab31046453bc787cbefc"},app=initializeApp(firebaseConfig);import{getDatabase,set,get,update,remove,ref,child}from"https://www.gstatic.com/firebasejs/9.9.4/firebase-database.js";const db=getDatabase();document.querySelector("#Submit").addEventListener("click",(()=>{set(ref(db,"SG/content"),{html:codeFinal}).then((()=>{console.log("Worked!")})).catch((e=>{console.log("Error - "+e)}))}));
+    </script>
+    <header-comp></header-comp>
+    <div id="importStyles"></div>
+    <main>
+      <section id="Editor">
+        <h2>Content Editor</h2>
+        <form>
+          <div class="Comps" aria-label="#h1">
+            <h3>H1 - Main titles</h3>
+            <font-styles></font-styles>
+            <color-picker></color-picker>
+          </div>
+          <div class="Comps" aria-label="#h2">
+            <h3>H2 - Titles</h3>
+            <font-styles></font-styles>
+            <color-picker></color-picker>
+          </div>
+          <div class="Comps" aria-label="#h3">
+            <h3>H3 - Subtitles</h3>
+            <font-styles></font-styles>
+            <color-picker></color-picker>
+          </div>
+          <div class="Comps" aria-label="#h4">
+            <h3>H4 - Secondary subtitles</h3>
+            <font-styles></font-styles>
+            <color-picker></color-picker>
+          </div>
+          <div class="Comps" aria-label="#main">
+            <h3>Main content</h3>
+            <font-styles></font-styles>
+            <color-picker></color-picker>
+          </div>
+          <div class="Comps" aria-label="#secondary">
+            <h3>Secondary content</h3>
+            <font-styles></font-styles>
+            <color-picker></color-picker>
+          </div>
+          <div class="Comps" aria-label="#legal">
+            <h3>Legal</h3>
+            <font-styles></font-styles>
+            <color-picker></color-picker>
+          </div>
+          <button type="button" class="Submit" id="Submit" onclick="getCode()">
+            Submit
+          </button>
+        </form>
+      </section>
+      <section id="Preview">
+        <div id="chContainer">
+          <h1 id="h1">H1 - Lorem ipsum</h1>
+          <h2 id="h2">H2 - Lorem ipsum</h2>
+          <h3 id="h3">H3 - Lorem ipsum</h3>
+          <h4 id="h4">H4 - Lorem ipsum</h4>
+          <p id="main">
+            Dolor sit amet consectetur adipisicing elit. Minus qui impedit iure
+            quaerat rem, laudantium vitae! Ex, ducimus. Inventore ullam eligendi
+            perspiciatis dolorem voluptas incidunt vitae harum corrupti maiores
+            neque.
+          </p>
+          <p id="secondary">
+            Dolor sit amet consectetur adipisicing elit. Minus qui impedit iure
+            quaerat rem, laudantium vitae! Ex, ducimus. Inventore ullam eligendi
+            perspiciatis dolorem voluptas incidunt vitae harum corrupti maiores
+            neque.
+          </p>
+          <p id="legal" class="legal">
+            Dolor sit amet consectetur adipisicing elit. Minus qui impedit iure
+            quaerat rem, laudantium vitae! Ex, ducimus. Inventore ullam eligendi
+            perspiciatis dolorem voluptas incidunt vitae harum corrupti maiores
+            neque.
+          </p>
+        </div>
+      </section>
+    </main>
+    <button id="GetData">Get data</button>
+  </body>
+</html>
