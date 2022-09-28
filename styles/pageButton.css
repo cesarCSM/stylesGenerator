@@ -183,6 +183,9 @@ button.Submit.Clicked::after {
   width: calc(100% - 40px);
   display: none;
 }
+#colorsDiv.firstC {
+    transform: translateY(-48px);
+}
 #fontsDiv {
   transform: translateY(-27px);
 }
