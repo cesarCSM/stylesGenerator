@@ -79,7 +79,7 @@ form > div > label {
   margin-bottom: 10px;
 }
 button.Submit.Clicked::after {
-  content: "Button updated!";
+  content: "Code copied!";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -184,7 +184,7 @@ button.Submit.Clicked::after {
   display: none;
 }
 #colorsDiv.firstC {
-    transform: translateY(-48px);
+  transform: translateY(-48px);
 }
 #fontsDiv {
   transform: translateY(-27px);
