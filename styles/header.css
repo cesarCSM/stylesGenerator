@@ -10,7 +10,7 @@ header > a {
 }
 nav {
   display: grid;
-  grid-template-columns: repeat(3, max-content);
+  grid-template-columns: repeat(4, max-content);
   gap: 20px;
   align-items: center;
   justify-content: right;
