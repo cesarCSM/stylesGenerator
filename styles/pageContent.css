@@ -20,7 +20,7 @@ main {
   max-width: 430px;
 }
 #chContainer * {
-  color: var(--color-main-dark-sapphire);
+  color: #000000;
   font-family: sans-serif;
 }
 #chContainer h4 {

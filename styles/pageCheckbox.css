@@ -86,6 +86,9 @@ label {
 #TextColor #colorPicker {
   background-color: var(--color-main-dark-sapphire);
 }
+#TextColor #colorPicker.Content {
+  background-color: #000000;
+}
 #BackgroundColor #colorPicker {
   background-color: var(--color-main-dark-sapphire);
 }
